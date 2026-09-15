@@ -1,0 +1,114 @@
+# SmartPension local repository safety rules
+# Keep robot-side dumps, credentials, generated files, and large artifacts out of Git.
+
+# Project source archives and other large packaged artifacts
+迷你主机ROS源码/
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+*.rar
+*.iso
+*.img
+*.dmg
+*.msi
+
+# Large robotics/runtime data
+*.bag
+*.bag.active
+*.db3
+*.mcap
+*.pcap
+*.pcapng
+*.sqlite
+*.sqlite3
+*.bin
+
+# Logs, temporary audit output, and scratch data
+logs/
+scratch/
+*.log
+*.tmp
+*.temp
+*.bak
+
+# Local-only project instructions and audit material may contain internal topology
+AGENTS.md
+docs/baseline/
+docs/network/
+docs/debug/
+
+# Robot/source snapshots: keep only deliberate documentation, not copied workspaces
+robot_original/*
+!robot_original/README.md
+
+# Secrets and local credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.secret
+secrets/
+credentials/
+config.local.*
+*_local.*
+id_rsa
+id_rsa.*
+id_ed25519
+id_ed25519.*
+authorized_keys
+known_hosts
+
+# Python environments and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# JavaScript/TypeScript dependencies and build output
+node_modules/
+.next/
+dist/
+build/
+coverage/
+
+# C/C++ and ROS build output
+devel/
+install/
+build_isolated/
+devel_isolated/
+.catkin_tools/
+CMakeFiles/
+CMakeCache.txt
+compile_commands.json
+*.o
+*.obj
+*.so
+*.dll
+*.a
+*.lib
+
+# IDE and operating-system files
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local tool state
+.codex/
+.agents/
+
